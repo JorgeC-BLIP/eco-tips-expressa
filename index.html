@@ -1,0 +1,89 @@
+HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTips Express</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-green-50 to-lime-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-3xl shadow-xl max-w-md w-full text-center border-2 border-emerald-200">
+        <!-- Main heading for the application -->
+        <h1 class="text-5xl font-extrabold text-emerald-700 mb-6 rounded-xl p-2 bg-emerald-50 inline-block shadow-md">
+            EcoTips Express 🌍
+        </h1>
+
+        <!-- Welcome paragraph for the user -->
+        <p class="text-gray-700 mb-8 text-lg leading-relaxed">
+            ¡Bienvenido a EcoTips Express! Ingresa un tema a continuación para obtener consejos ecológicos rápidos y útiles. Cuidemos juntos nuestro planeta. 🌱
+        </p>
+
+        <!-- Input field for user text -->
+        <input
+            type="text"
+            id="tipInput"
+            placeholder="Ej: Reciclaje, ahorro de energía..."
+            class="w-full p-4 mb-5 border border-emerald-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-emerald-400 focus:border-transparent text-lg placeholder-gray-500"
+        />
+
+        <!-- Button to trigger an action -->
+        <button
+            id="getTipButton"
+            class="w-full bg-emerald-600 text-white p-4 rounded-xl hover:bg-emerald-700 transition duration-300 ease-in-out shadow-lg transform hover:scale-105 text-xl font-semibold mb-6"
+        >
+            Obtener EcoTip ✨
+        </button>
+
+        <!-- Menu of specific eco-tip options -->
+        <div class="mt-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Explora Temas Ecológicos:</h3>
+            <div class="grid grid-cols-2 gap-4">
+                <button class="menu-button" data-topic="Reciclaje Inteligente" data-clean-topic="Reciclaje">
+                    ♻️ Reciclaje Inteligente
+                </button>
+                <button class="menu-button" data-topic="Ahorro de Agua">
+                    🚿 Ahorro de Agua
+                </button>
+                <button class="menu-button" data-topic="Ahorro de Energía">
+                    🔌 Ahorro de Energía
+                </button>
+                <button class="menu-button" data-topic="Consumo Responsable">
+                    🛒 Consumo Responsable
+                </button>
+                <button class="menu-button" data-topic="Huertos Urbanos">
+                    🌿 Huertos Urbanos
+                </button>
+                <button class="menu-button" data-topic="Limpieza Ecológica">
+                    🧼 Limpieza Ecológica
+                </button>
+                <button class="menu-button" data-topic="Movilidad Sostenible">
+                    🚲 Movilidad Sostenible
+                </button>
+            </div>
+        </div>
+
+        <!-- Empty div to display dynamic content -->
+        <div
+            id="results"
+            class="mt-8 p-6 bg-emerald-50 text-emerald-900 rounded-2xl border border-emerald-300 text-left shadow-inner hidden"
+        >
+            <!-- Content will be displayed here dynamically -->
+            <p id="resultText" class="text-lg leading-relaxed"></p>
+        </div>
+
+        <!-- Loading indicator -->
+        <div id="loadingIndicator" class="mt-6 hidden">
+            <div class="animate-spin rounded-full h-10 w-10 border-b-4 border-emerald-600 mx-auto"></div>
+            <p class="text-gray-600 mt-3 text-lg">Generando EcoTip...</p>
+        </div>
+    </div>
+
+    <!-- Link to your external JavaScript file -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
