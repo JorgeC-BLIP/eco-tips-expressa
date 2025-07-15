@@ -1,0 +1,9 @@
+body {
+    font-family: "Inter", sans-serif;
+}
+/* Custom button styles for the menu options */
+.menu-button {
+    /* Updated colors for an eco-friendly feel */
+    @apply bg-emerald-100 text-emerald-800 py-2 px-4 rounded-full hover:bg-emerald-200 transition duration-200 ease-in-out text-sm font-medium shadow-sm;
+    @apply flex items-center justify-center space-x-2; /* For icon and text alignment */
+}
